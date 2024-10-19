@@ -2,10 +2,8 @@
 
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
-import { BanknotesIcon, ShieldCheckIcon, UserIcon, } from '@heroicons/react/20/solid'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { CheckIcon } from '@heroicons/react/20/solid'
-import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
+import { BanknotesIcon, GiftIcon, ShieldCheckIcon, UserIcon, CheckIcon} from '@heroicons/react/20/solid'
+import { Bars3Icon, NewspaperIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
 const navigation = [
@@ -315,7 +313,7 @@ function FeaturesSection() {
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 Enjoy a better reading experience with superior features from ReadBooks.
               </p>
-              <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+              <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none text-justify">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
@@ -407,12 +405,11 @@ function SubscriptionTiers() {
       <div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
         <h2 className="text-base font-semibold leading-7 text-indigo-600">Pricing</h2>
         <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          The right price for you, whoever you are
+          Subscribe today and change the way you experience every page!
         </p>
       </div>
       <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
-        Qui iusto aut est earum eos quae. Eligendi est at nam aliquid ad quo reprehenderit in aliquid fugiat dolorum
-        voluptatibus.
+        Dont just read—live every page by subscribing today and discover new depths in every story!
       </p>
       <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
         {tiers.map((tier, tierIdx) => (
@@ -523,10 +520,11 @@ function AboutUs() {
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat aliqua.
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">About Us</h2>
+          <p className="mt-6 text-lg leading-8 text-gray-300 text-justify">
+            At ReadBooks, we are passionate about fostering a love for reading in everyone. 
+            Our mission is to provide a vast collection of books across various genres, making literature accessible to all. 
+            We believe that every page turned can ignite imagination and inspire change.
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
@@ -559,8 +557,7 @@ function Newslater() {
           <div className="max-w-xl lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">Subscribe to our newsletter.</h2>
             <p className="mt-4 text-lg leading-8 text-black">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt
-              dolore.
+              Get the latest information about interesting offers and the latest book launches from ReadBooks! By subscribing to our newsletter.
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">
@@ -586,20 +583,20 @@ function Newslater() {
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
             <div className="flex flex-col items-start">
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-black/10">
-                <CalendarDaysIcon aria-hidden="true" className="h-6 w-6 text-black" />
+                <GiftIcon aria-hidden="true" className="h-6 w-6 text-black" />
               </div>
-              <dt className="mt-4 font-semibold text-black">Weekly articles</dt>
+              <dt className="mt-4 font-semibold text-black">Recommended Reading</dt>
               <dd className="mt-2 leading-7 text-black">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.
+                Get book recommendations that suit your interests and preferences. We`ll help you find the perfect read for every mood.
               </dd>
             </div>
             <div className="flex flex-col items-start">
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-black/10">
-                <HandRaisedIcon aria-hidden="true" className="h-6 w-6 text-black" />
+                <NewspaperIcon aria-hidden="true" className="h-6 w-6 text-black" />
               </div>
-              <dt className="mt-4 font-semibold text-black">No spam</dt>
+              <dt className="mt-4 font-semibold text-black">Exclusive News and Events</dt>
               <dd className="mt-2 leading-7 text-black">
-                Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.
+                Get information about book launch events, author discussions, and other community events that will take your reading experience to the next level.
               </dd>
             </div>
           </dl>
