@@ -2,39 +2,79 @@
 
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { BanknotesIcon, ShieldCheckIcon, UserIcon, } from '@heroicons/react/20/solid'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
 
-// Navigation menu items
+
 const navigation = [
-  { name: 'Product', href: '#' },
+  { name: 'Books', href: '#' },
   { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Pricing', href: '#' },
+  { name: 'About Us', href: '#' },
 ]
 
 const features = [
   {
-    name: 'Push to deploy.',
+    name: 'Affordable prices.',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: CloudArrowUpIcon,
+      'Get access to thousands of books at pocket-friendly prices. Enjoy quality reading without worrying about high costs.',
+    icon: BanknotesIcon,
   },
   {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: LockClosedIcon,
+    name: 'Secure Payment.',
+    description: 'Security is our priority. The encrypted payment process ensures your transactions are safe and secure.',
+    icon: ShieldCheckIcon,
   },
   {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ServerIcon,
+    name: 'User-Friendly Display.',
+    description: 'The clean and intuitive interface makes your reading experience more comfortable and enjoyable, both on desktop and mobile.',
+    icon: UserIcon,
   },
 ]
 
 const products = [
+  {
+    id: 1,
+    name: 'Basic Tee',
+    href: '#',
+    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$35',
+    color: 'Black',
+  },
+  
+  {
+    id: 2,
+    name: 'Basic Tee',
+    href: '#',
+    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$35',
+    color: 'Black',
+  },
+
+  {
+    id: 3,
+    name: 'Basic Tee',
+    href: '#',
+    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$35',
+    color: 'Black',
+  },
+
+  {
+    id: 4,
+    name: 'Basic Tee',
+    href: '#',
+    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$35',
+    color: 'Black',
+  },
+
   {
     id: 1,
     name: 'Basic Tee',
@@ -220,26 +260,23 @@ function MainNavigation() {
         <div className="mx-auto max-w-2xl py-24 sm:py-32 lg:py-40">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Announcing our next round of funding.{' '}
+              Welcome to ReadBooks.{' '}
               <a href="#" className="font-semibold text-indigo-600">
                 <span aria-hidden="true" className="absolute inset-0" />
-                Read more <span aria-hidden="true">&rarr;</span>
+                Explore Now <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
           <div className="text-center">
             <h1 className="text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Data to enrich your online business
+              Read without limits, discover new worlds.
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+              ReadBooks: Online book reading platform for literature lovers. Access the best collections anytime, anywhere. 
+              Enjoy a comfortable and inspiring reading experience. Start your literacy adventure today!
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
+              <a href="#" className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                 Get started
               </a>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -265,7 +302,7 @@ function MainNavigation() {
   )
 }
 
-// Features section component
+
 function FeaturesSection() {
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">
@@ -273,11 +310,10 @@ function FeaturesSection() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</p>
+              <h2 className="text-base font-semibold leading-7 text-indigo-600">Features</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Reasons Why You Should Read at ReadBooks</p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste dolor cupiditate blanditiis ratione.
+                Enjoy a better reading experience with superior features from ReadBooks.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
@@ -309,32 +345,47 @@ function MainProduct() {
   return(
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
-
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers Also Purchased</h2>
+        <p className="mt-0 text-lg leading-8 text-gray-600">
+          Enjoy a better reading experience with superior features from ReadBooks.
+        </p>
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
-            <div key={product.id} className="group relative">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <div key={product.id} className="group relative rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gradient-to-b from-white to-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                 <img
                   alt={product.imageAlt}
                   src={product.imageSrc}
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
-              <div className="mt-4 flex justify-between">
-                <div>
+              <div className="bg-white p-4 flex flex-col justify-between">
+                <div className="flex justify-between items-center">
                   <h3 className="text-sm text-gray-700">
                     <a href={product.href}>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
                     </a>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                  <p className="text-sm font-medium text-gray-900">{product.price}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                <div className="mt-4 flex justify-center space-x-4">
+                  <button className="bg-gray-200 text-gray-700 py-2 px-4 rounded hover:bg-gray-300 transition-colors">
+                    Detail
+                  </button>
+                  <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                    Buy
+                  </button>
+                </div>
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center space-x-4">
+          <button className="bg-gray-200 text-gray-700 py-2 px-4 rounded hover:bg-gray-300 transition-colors">
+            See All
+          </button>
         </div>
       </div>
     </div>
