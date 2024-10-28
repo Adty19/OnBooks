@@ -128,7 +128,7 @@ const tiers = [
     name: 'Enterprise',
     id: 'tier-enterprise',
     href: '#',
-    priceMonthly: '$99',
+    priceMonthly: '$70',
     description: 'Dedicated support and infrastructure for your company.',
     features: [
       'Unlimited products',
